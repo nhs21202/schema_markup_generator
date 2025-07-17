@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, useEffect } from "react";
+import  { useState, useCallback, useMemo, useEffect } from "react";
 import {
   Card,
   Text,
@@ -6,7 +6,7 @@ import {
   Box,
   Divider,
   Button,
-  IconSource,
+  type IconSource,
   Grid,
   InlineGrid,
   ButtonGroup,

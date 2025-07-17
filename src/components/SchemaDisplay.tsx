@@ -1,14 +1,22 @@
-import { Card, BlockStack, Tooltip, Button, IconSource, Divider, Box, Text } from '@shopify/polaris';
-import { ClipboardIcon } from '@shopify/polaris-icons';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import React from 'react';
+import {
+  Card,
+  BlockStack,
+  Tooltip,
+  Button,
+  Divider,
+  Box,
+  Text,
+} from "@shopify/polaris";
+import type { IconSource } from "@shopify/polaris";
+import { ClipboardIcon } from "@shopify/polaris-icons";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { stackoverflowDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 type Props = {
-    jsonLDString: string;
-    isCopied: boolean;
-    handleCopy: () => void;
-}
+  jsonLDString: string;
+  isCopied: boolean;
+  handleCopy: () => void;
+};
 const SchemaDisplay = ({ jsonLDString, isCopied, handleCopy }: Props) => {
   return (
     <Card padding={"0"} background="bg-fill-brand-selected">
@@ -52,6 +60,6 @@ const SchemaDisplay = ({ jsonLDString, isCopied, handleCopy }: Props) => {
       </BlockStack>
     </Card>
   );
-}
+};
 
-export default SchemaDisplay
+export default SchemaDisplay;

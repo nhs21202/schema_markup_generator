@@ -1,4 +1,4 @@
-import { JsonLDData } from "../types/jsonld-data.type";
+import type { JsonLDData } from "../types/jsonld-data.type";
 
 const trimString = (value: string | undefined | null): string => {
   if (!value) return "";

@@ -1,8 +1,7 @@
-import React from "react";
 import { FormLayout, TextField, Box, Grid } from "@shopify/polaris";
 import CustomSelection from "./CustomSelection";
 import type { JsonLDData } from "../types/jsonld-data.type";
-import { Controller, Control, FieldErrors } from "react-hook-form";
+import { Controller, type Control, type FieldErrors } from "react-hook-form";
 
 type ProductFormProps = {
   jsonData: JsonLDData;

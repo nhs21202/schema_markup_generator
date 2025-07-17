@@ -5,12 +5,11 @@ import {
   TextField,
   Text,
   Button,
-  Icon,
+  type IconSource,
 } from "@shopify/polaris";
-import React from "react";
 import type { JsonLDData } from "../types/jsonld-data.type";
 import { DeleteIcon } from "@shopify/polaris-icons";
-import { Controller, Control, FieldErrors } from "react-hook-form";
+import { Controller, type Control, type FieldErrors } from "react-hook-form";
 
 type ReviewFormBlockProps = {
   index: number;
@@ -42,9 +41,9 @@ const ReviewFormBlock = ({
           </Text>
           <Button
             size="large"
-            tone="critical"
             variant="plain"
-            icon={<Icon source={DeleteIcon} />}
+            tone="critical"
+            icon={DeleteIcon as IconSource}
             onClick={() => handleRemove(index)}
           />
         </div>

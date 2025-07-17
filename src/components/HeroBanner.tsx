@@ -1,4 +1,3 @@
-import React from "react";
 
 const HeroBanner = () => {
   return (
@@ -25,17 +24,19 @@ const HeroBanner = () => {
           }}
         >
           Review and Rating Schema
-          <h2
-            style={{
-              color: "#57A06A",
-              fontWeight: "bold",
-              lineHeight: "1.1",
-              margin: "0 0 4rem 0",
-            }}
-          >
-            Markup Generator
-          </h2>
         </h1>
+        <h2
+          style={{
+            fontSize: "4rem",
+
+            color: "#57A06A",
+            fontWeight: "bold",
+            lineHeight: "1.1",
+            margin: "0 0 4rem 0",
+          }}
+        >
+          Markup Generator
+        </h2>
 
         <p
           style={{
