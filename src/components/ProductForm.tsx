@@ -2,6 +2,7 @@ import { FormLayout, TextField, Box, Grid } from "@shopify/polaris";
 import CustomSelection from "./CustomSelection";
 import type { JsonLDData } from "../types/jsonld-data.type";
 import { Controller, type Control, type FieldErrors } from "react-hook-form";
+import { IMAGE_URL_REGEX } from "../constant/regex";
 
 type ProductFormProps = {
   jsonData: JsonLDData;
@@ -31,17 +32,28 @@ const ProductForm = ({
           onChange={(value) => handleFieldChange("productName", value)}
           autoComplete="off"
         />
-        <TextField
-          label="Image URL"
-          value={jsonData.imageUrl}
-          onChange={(value) => handleFieldChange("imageUrl", value)}
-          autoComplete="off"
-        />
-        <TextField
-          label="Brand"
-          value={jsonData.brand}
-          onChange={(value) => handleFieldChange("brand", value)}
-          autoComplete="off"
+        <Controller
+          name="imageUrl"
+          control={control}
+          defaultValue={jsonData.imageUrl}
+          rules={{
+            pattern: {
+              value: IMAGE_URL_REGEX,
+              message: "Invalid image URL",
+            },
+          }}
+          render={({ field }) => (
+            <TextField
+              label="Image URL"
+              value={field.value}
+              onChange={(value) => {
+                field.onChange(value);
+                handleFieldChange("imageUrl", value);
+              }}
+              autoComplete="off"
+              error={errors.imageUrl?.message}
+            />
+          )}
         />
         <TextField
           label="Product description"
