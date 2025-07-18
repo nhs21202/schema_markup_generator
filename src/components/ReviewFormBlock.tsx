@@ -3,7 +3,6 @@ import {
   Divider,
   FormLayout,
   TextField,
-  Text,
   Button,
   type IconSource,
 } from "@shopify/polaris";
@@ -35,10 +34,7 @@ const ReviewFormBlock = ({
     <Box paddingBlockEnd="200">
       {index > 0 && <Divider borderColor="border-brand" />}
       <Box padding={"500"}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <Text as="h3" variant="headingMd">
-            Review {index + 1}
-          </Text>
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Button
             size="large"
             variant="plain"

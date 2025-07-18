@@ -38,7 +38,7 @@ const initialJsonData: JsonLDData = {
   lowestRatingAllowed: 1,
   reviews: [],
 };
-export default function ProductDetailsCard() {
+export default function App() {
   const [jsonData, setJsonData] = useState<JsonLDData>(initialJsonData);
   const [isCopied, setIsCopied] = useState(false);
 
